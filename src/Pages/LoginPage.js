@@ -9,7 +9,7 @@ export default class LoginPage extends Component {
                     <input type='text' placeholder='Cody_Gill...' className='userName'/>
                     <label className='Password'>Password</label>
                     <input type='text' className='userName'/>
-                    <p>Forgot Password ?<button>Click here</button></p>
+                    {/* <p>Forgot Password ?<button>Click here</button></p> */}
                     <button type='submit'>Login</button>
                 </form>
             </div>
