@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "name": "vinyl-rock-barbershop",
+    "routes": [
+        {
+            "src": "^/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
+            "src": ".*",
+            "dest": "/index.html"
+        }
+    ]
+}
