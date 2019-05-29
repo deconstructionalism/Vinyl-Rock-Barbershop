@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
 
 
 export default class LoginForm extends Component {
 
-    handleSubmitJwtAuth = e =>{
+    handleSubmitJwtAuth = e => {
         e.preventDefault()
-        this.setState({error:null})
-        const { user_name,password } = e.target
+        this.setState({ error: null })
+        const { user_name, password } = e.target
 
         AuthApiService.postLogin({
             user_name: user_name.value,
@@ -28,8 +30,8 @@ export default class LoginForm extends Component {
         return (
             <div>
                 <form
-                  className='LoginForm'
-                  onSubmit={this.handleSubmitJwtAuth}
+                    className='LoginForm'
+                    onSubmit={this.handleSubmitJwtAuth}
                 >
                     <label className='userName'>User Name</label>
                     <input type='text' placeholder='Cody_Gill...' name='user_name' />
@@ -39,6 +41,7 @@ export default class LoginForm extends Component {
 
                     {/* <p>Forgot Password ?<button>Click here</button></p> */}
                     <button type='submit'>Login</button>
+                    <Link to='/Register'> Register </Link>
                 </form>
             </div>
         )
