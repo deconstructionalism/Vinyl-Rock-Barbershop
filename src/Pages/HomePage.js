@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 
-export default class LandingPage extends Component {
+export default class Homepage extends Component {
     render() {
         return (
             <div>
-                <h1> Main page</h1>
+                <h1>Vinly Rock</h1>
+                <h2>Barbershop</h2>
             </div>
         )
     }
