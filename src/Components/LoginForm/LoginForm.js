@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 
 export default class LoginForm extends Component {
 
-    handleSubmitToApi = e =>{
+    handleSubmitJwtAuth = e =>{
         e.preventDefault()
-        const {user_name,password} = e.target
+        this.setState({error:null})
+        const { user_name,password } = e.target
 
         let loginInfo = {
             user_name: user_name.value,
@@ -28,7 +29,7 @@ export default class LoginForm extends Component {
             <div>
                 <form
                   className='LoginForm'
-                  onSubmit={this.handleSubmitToApi}
+                  onSubmit={this.handleSubmitJwtAuth}
                 >
                     <label className='userName'>User Name</label>
                     <input type='text' placeholder='Cody_Gill...' name='user_name' />
