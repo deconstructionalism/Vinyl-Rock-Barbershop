@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import './App.css';
+import {Route , Switch} from 'react-router-dom'
 
-// import NavBar from './Components/NavBar'
+import NavBar from '../NavBar/NavBar'
 import LoginPage from '../../Pages/LoginPage'
+import './App.css';
 
 export default class App extends Component {
 
@@ -10,7 +11,15 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <LoginPage/>
+        <header>
+          <NavBar/>
+        </header>
+        <main role='main' className='vinyl-main'>
+        <Switch>
+          <Route exact path='/Login' component={LoginPage}/>
+        </Switch>
+        
+        </main>
         
       </div>
     )
