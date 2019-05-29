@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import TokenService from '../../services/token-service'
+import AuthApiService from '../../services/auth-api-service'
+
 
 export default class LoginForm extends Component {
 
@@ -7,22 +10,19 @@ export default class LoginForm extends Component {
         this.setState({error:null})
         const { user_name,password } = e.target
 
-        let loginInfo = {
+        AuthApiService.postLogin({
             user_name: user_name.value,
-            password: password.value
-        }
-        return fetch('http://localhost:8000/user',{
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
-            },
-            body: JSON.stringify(loginInfo)
+            password: password.value,
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-        })
-        
+            .then(res => {
+                user_name.value = ''
+                password.value = ''
+                TokenService.saveAuthToken(res.authToken)
+                this.props.onLoginSuccess()
+            })
+            .catch(res => {
+                this.setState({ error: res.error })
+            })
     }
     render() {
         return (
