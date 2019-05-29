@@ -6,6 +6,11 @@ import AuthApiService from '../../services/auth-api-service'
 
 
 export default class LoginForm extends Component {
+    static defaultProps = {
+        onLoginSuccess: () => { }
+    }
+
+    state = { error: null }
 
     handleSubmitJwtAuth = e => {
         e.preventDefault()
@@ -27,12 +32,16 @@ export default class LoginForm extends Component {
             })
     }
     render() {
+        const {error} = this.state
         return (
             <div>
                 <form
                     className='LoginForm'
                     onSubmit={this.handleSubmitJwtAuth}
                 >
+                    <div role='alert'>
+                        {error && <p className='red'>{error}</p>}
+                    </div>
                     <label className='userName'>
                         User Name
                     </label>
