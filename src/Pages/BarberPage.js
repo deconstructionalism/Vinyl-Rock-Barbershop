@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import BarberList from '../Components/BarberList/BarberList'
 
 export default class BarberPage extends Component {
     render() {
         return (
             <div>
-                <h1>Barber Page</h1>
+                <h1>Pick Your Pro</h1>
+                <BarberList/>
             </div>
         )
     }
