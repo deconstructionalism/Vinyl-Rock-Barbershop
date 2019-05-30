@@ -3,6 +3,12 @@ import {Link} from 'react-router-dom'
 
 export default class RegisterForm extends Component {
     state= {error: null}
+
+    handleNewUserSubmit = e =>{
+        e.preventDefault()
+
+
+    }
     render() {
         const {error} = this.state
         return (
@@ -10,7 +16,6 @@ export default class RegisterForm extends Component {
                 <div>
                     <form
                         className='RegisterForm'
-                        onSubmit={this.handleSubmitJwtAuth}
                     >
                         <div role='alert'>
                             {error && <p className='red'>{error}</p>}
@@ -22,7 +27,7 @@ export default class RegisterForm extends Component {
                             type='text'
                             placeholder='First'
                             name='First_name'
-                            required
+                            
                         />
                         <label className='Last-Name'>
                             Last Name
@@ -31,7 +36,7 @@ export default class RegisterForm extends Component {
                             type='text'
                             placeholder='Last'
                             name='Last_name'
-                            required
+                            
                         />
                         <label className='userName'>
                             User Name
@@ -40,7 +45,7 @@ export default class RegisterForm extends Component {
                             type='text'
                             placeholder='First_Last...'
                             name='user_name'
-                            required
+                            
                         />
                         <label className='Password'>
                             Password
@@ -48,14 +53,15 @@ export default class RegisterForm extends Component {
                         <input
                             type='password'
                             name='password'
-                            required
+                            
                         />
                         <label className='phone_number'>
                             Phone Number
                         </label>
                         <input
-                            type='text'
-                            placeholder='916-289-1234'
+                            type='tel'
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder='XXX-XXX-XXXX'
                             name='phone_number'
                         />
                         <label className='email'>
