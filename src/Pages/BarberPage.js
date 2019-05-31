@@ -6,6 +6,7 @@ export default class BarberPage extends Component {
         return (
             <div>
                 <h1>Pick Your Pro</h1>
+                <p> Only next day appointments</p>
                 <BarberList/>
             </div>
         )
