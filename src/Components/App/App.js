@@ -31,7 +31,7 @@ export default class App extends Component {
             <Route exact path='/Login' component={LoginPage} />
             <Route exact path='/Register' component={RegisterPage} />
             <Route exact path='/Barbers' component={BarberPage} />
-            <Route exact path='/BarbersProfile/1' component={BarberProfile}/>
+            <Route exact path='/BarbersProfile/:barberid' component={BarberProfile}/>
             <Route exact path='/Service' component={ServiceManuPage} />
 
           </Switch>

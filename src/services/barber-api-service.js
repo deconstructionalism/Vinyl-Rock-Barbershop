@@ -3,7 +3,7 @@ import TokenService from './token-service'
 
 const BarberApiService = {
     getAllBarbers(){
-        return fetch(`${config.API_ENDPOINT}/barbers`,{
+        return fetch(`${config.API_ENDPOINT}/barber`,{
             headers:{     
             },
         })
@@ -14,7 +14,7 @@ const BarberApiService = {
             )
     },
     getBarber(barberId){
-        return fetch(`${config.API_ENDPOINT}/barbers/${barberId}`,{
+        return fetch(`${config.API_ENDPOINT}/barber/${barberId}`,{
             headers:{
                 'Authorization': `bearer ${TokenService.getAuthToken()}`
             },
