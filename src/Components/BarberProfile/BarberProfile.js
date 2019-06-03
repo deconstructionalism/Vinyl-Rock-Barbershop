@@ -3,7 +3,7 @@ import BarberApiService from '../../services/barber-api-service'
 import { TimeButtons } from '../Utilitys/Utils'
 export default class BarberProfile extends Component {
     state = {
-        barberService: [],
+        barberInfo: [],
          hasError: false 
     }
     static defaultProps = {
@@ -12,15 +12,21 @@ export default class BarberProfile extends Component {
     componentDidMount(){
         const {barberid} = this.props.match.params
         BarberApiService.getBarber(barberid)
-            .then(this.setState.barberService)
+            .then(data => {
+                return this.setState({barberInfo:data})
+            })
     }
     renderTitle(){
-        
+        return this.barberInfo.map(barber => 
+            console.log(barber))
+
+
     }
     render() {
+        const {first_name } = this.state.barberInfo
         return (
             <div>
-                <h1></h1>
+                <h1>{first_name}</h1>
                 <h3>Choose your Service</h3>
                 <form className='service-list'>
                     <button value='hairCut'>
