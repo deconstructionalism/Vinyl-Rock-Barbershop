@@ -24,6 +24,18 @@ const BarberApiService = {
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
         )
+    },
+
+    getBarberServices(){
+        return fetch(`${config.API_ENDPOINT}/services`,{
+        headers:{
+            },
+        })
+        .then(res => 
+            (!res.ok)
+                ? res.json().then(e => Promise.reject(e))
+                : res.json()
+        )
     }
 }
 

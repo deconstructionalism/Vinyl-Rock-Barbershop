@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
-
+import BarberApiService from '../../services/barber-api-service'
+import { TimeButtons } from '../Utilitys/Utils'
 export default class BarberProfile extends Component {
+     allBarberSevices = () => {
+        BarberApiService.getBarberServices()
+        .then(data => console.log(data))
+    }
     render() {
         return (
             <div>
-                <h1>Shawn</h1>
+                <h1></h1>
                 <h3>Choose your Service</h3>
+                {this.allBarberSevices}
                 <form className='service-list'>
                     <button value='hairCut'>
                         <h3>HAIRCUT</h3>
@@ -49,44 +55,7 @@ export default class BarberProfile extends Component {
                     </button>
                 </form>
                 <h3>Pick Time</h3>
-                <form>
-                    <button>
-                        <p>7:00 a.m</p>
-                    </button>
-                    <button>
-                        <p>8:00 a.m</p>
-                    </button>
-                    <button>
-                        <p>9:00 a.m</p>
-                    </button>
-                    <button>
-                        <p>10:00 a.m</p>
-                    </button>
-                    <button>
-                        <p>11:00 a.m</p>
-                    </button>
-                    <button>
-                        <p>1:00 p.m</p>
-                    </button>
-                    <button>
-                        <p>2:00 p.m</p>
-                    </button>
-                    <button>
-                        <p>3:00 p.m</p>
-                    </button>
-                    <button>
-                        <p>4:00 p.m</p>
-                    </button>
-                    <button>
-                        <p>5:00 p.m</p>
-                    </button>
-                    <button>
-                        <p>6:00 p.m</p>
-                    </button>
-                    <button>
-                        <p>7:00 p.m</p>
-                    </button>
-                </form>
+                <TimeButtons/>
                 <button type='submit'>Review/Book</button>
             </div>
         )
