@@ -2,16 +2,26 @@ import React, { Component } from 'react'
 import BarberApiService from '../../services/barber-api-service'
 import { TimeButtons } from '../Utilitys/Utils'
 export default class BarberProfile extends Component {
-     allBarberSevices = () => {
-        BarberApiService.getBarberServices()
-        .then(data => console.log(data))
+    state = {
+        barberService: [],
+         hasError: false 
+    }
+    static defaultProps = {
+        match: {params: {}}
+    }
+    componentDidMount(){
+        const {barberid} = this.props.match.params
+        BarberApiService.getBarber(barberid)
+            .then(this.setState.barberService)
+    }
+    renderTitle(){
+        
     }
     render() {
         return (
             <div>
                 <h1></h1>
                 <h3>Choose your Service</h3>
-                {this.allBarberSevices}
                 <form className='service-list'>
                     <button value='hairCut'>
                         <h3>HAIRCUT</h3>
