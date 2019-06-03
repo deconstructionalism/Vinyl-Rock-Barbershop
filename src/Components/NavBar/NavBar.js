@@ -21,7 +21,10 @@ export default class NavBar extends Component {
                 </Link>
                 <Link to="/Barbers">
                   Barbers
-                  </Link>
+                </Link>
+                <Link to='/Profile'>
+                  Profile
+                </Link>
                 <Link to="/Login">
                   Login
                 </Link>
