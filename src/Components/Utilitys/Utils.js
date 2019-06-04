@@ -19,7 +19,7 @@ export class ServiceButtons extends Component {
 
     renderServices() {
         return this.state.barberServices.map(barber => {
-            return <button 
+            return <button
                 onClick={(e) => this.handleSelectServiceType(e, barber)}
                 key={barber.id} >
                 <h3>{barber.type}</h3>
@@ -64,11 +64,11 @@ export class TimeButtons extends Component {
             for (let i = 1; i <= 12; i++) {
                 i += idNumber
             }
-            return <button onClick={(e)=> this.handleSelectTime(time)}
-                            id={idNumber} 
-                            key={key}>
-                        <p>{time}</p>
-                    </button>
+            return <button onClick={(e) => this.handleSelectTime(e, time)}
+                id={idNumber}
+                key={key}>
+                <p>{time}</p>
+            </button>
         })
     }
     render() {

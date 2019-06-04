@@ -7,7 +7,7 @@ export default class BarberProfile extends Component {
         barberInfo: [],
         newAppointment: [],
         serviceSelected: '',
-        timeSelected:'',
+        timeSelected: '',
         hasError: false
     }
     static defaultProps = {
@@ -15,39 +15,47 @@ export default class BarberProfile extends Component {
     }
     componentDidMount() {
         const { barberid } = this.props.match.params
+        const { newAppointment } = this.state.newAppointment
         BarberApiService.getBarber(barberid)
             .then(data => {
                 return this.setState({ barberInfo: data })
             })
-        }
-    handlePostOfSelectedServices = ev => {
-        ev.preventDefault();
-        console.log(this.state)
-       
     }
-    handleSelectServiceType = ev => {
-        return this.setState({serviceSelected:ev})
+
+
+    handleServiceType = ev => {
+        return this.setState({ serviceSelected: ev })
     }
     handleSelectTime = ev => {
-
+        return this.setState({ timeSelected: ev })
     }
+    
+    handlePostOfSelectedServices = ev => {
+        ev.preventDefault();
 
+         this.setState({
+            newAppointment: [
+                this.state.serviceSelected,
+                this.state.timeSelected]
+        })
+        console.log(this.state.newAppointment)
+    }
     render() {
         const { first_name } = this.state.barberInfo
         return (
             <div>
                 <h1>{first_name}</h1>
                 <form className='service-time-list'
-                    onClick={this.handlePostOfSelectedServices}
+                    onSubmit={this.handlePostOfSelectedServices}
                 ><div className='service-list'>
-                <h3>Choose your Service</h3>
-                <ServiceButtons serviceId = {this.handleSelectServiceType}/>
-                </div>
-                <div className='time-list'>
-                <h3>Pick Time</h3>
-                <TimeButtons />
-                </div>
-                <button type='submit'>Review/Book</button>
+                        <h3>Choose your Service</h3>
+                        <ServiceButtons serviceId={this.handleServiceType} />
+                    </div>
+                    <div className='time-list'>
+                        <h3>Pick Time</h3>
+                        <TimeButtons timeId={this.handleSelectTime} />
+                    </div>
+                    <button type='submit'>Review/Book</button>
                 </form>
             </div>
         )
