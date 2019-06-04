@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AppointmentApiService from '../Services/appointment-api-service'
-import { TimeButtons } from '../Components/Utilitys/Utils'
+
 
 export default class ProfilePage extends Component {
     static defaultProps = {
@@ -22,11 +22,11 @@ export default class ProfilePage extends Component {
     renderProfile() {
         const { appointmentList } = this.state
         return appointmentList.map( appointment => {
-            const { time, barber_id, services_id } = appointment
+            const { time, first_name, type } = appointment
             return <tr>
                 <td>{time}</td>
-                <td>{barber_id}</td>
-                <td>{services_id}</td>
+                <td>{first_name}</td>
+                <td>{type}</td>
                 <td><button>Cancel</button></td>
             </tr>
         })
@@ -34,7 +34,6 @@ export default class ProfilePage extends Component {
     }
 
     render() {
-        const { time, barber, services_id } = this.state.appointmentList
         return (
             <div>
                 <h1>My Profile</h1>
