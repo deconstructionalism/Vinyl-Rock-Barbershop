@@ -26,7 +26,7 @@ export default class BarberProfile extends Component {
        
     }
     handleSelectServiceType = ev => {
-        this.setState({serviceSelected:ev})
+        return this.setState({serviceSelected:ev})
     }
     handleSelectTime = ev => {
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import AppointmentApiService from '../../Services/appointment-api-service'
 import BarberApiService from '../../Services/barber-api-service';
 
 export class ServiceButtons extends Component {
@@ -13,15 +12,15 @@ export class ServiceButtons extends Component {
 
             })
     }
-    handleSelectServiceType = (e, type) => {
-        // this.props.serviceid(type)
+    handleSelectServiceType = (e, selected) => {
         e.preventDefault()
-        this.props.serviceId(type.type)
+        this.props.serviceId(selected.type)
     }
 
     renderServices() {
         return this.state.barberServices.map(barber => {
-            return <button onClick={(e) => this.handleSelectServiceType(e ,barber)}
+            return <button 
+                onClick={(e) => this.handleSelectServiceType(e, barber)}
                 key={barber.id} >
                 <h3>{barber.type}</h3>
                 <p>{barber.cost} 45min</p>
@@ -40,45 +39,42 @@ export class ServiceButtons extends Component {
 
 
 export class TimeButtons extends Component {
+
+    handleSelectTime = (e, selected) => {
+        e.preventDefault()
+        this.props.timeId(selected)
+    }
+    renderTimeButtons() {
+        let timesArray = ['7:00 a.m',
+            '8:00 a.m',
+            '9:00 a.m',
+            '10:00 a.m',
+            '11:00 a.m',
+            '12:00 p.m',
+            '1:00 p.m',
+            '2:00 p.m',
+            '3:00 p.m',
+            '4:00 p.m',
+            '5:00 p.m',
+            '6:00 p.m',
+            '7:00 p.m']
+
+        return timesArray.map((time, key) => {
+            let idNumber;
+            for (let i = 1; i <= 12; i++) {
+                i += idNumber
+            }
+            return <button onClick={(e)=> this.handleSelectTime(time)}
+                            id={idNumber} 
+                            key={key}>
+                        <p>{time}</p>
+                    </button>
+        })
+    }
     render() {
         return (
             <div>
-                <button id='1'>
-                    <p>7:00 a.m</p>
-                </button>
-                <button id='2'>
-                    <p>8:00 a.m</p>
-                </button>
-                <button id='3'>
-                    <p>9:00 a.m</p>
-                </button>
-                <button id='4'>
-                    <p>10:00 a.m</p>
-                </button>
-                <button id='5'>
-                    <p>11:00 a.m</p>
-                </button>
-                <button id='6'>
-                    <p>1:00 p.m</p>
-                </button>
-                <button id='7'>
-                    <p>2:00 p.m</p>
-                </button>
-                <button id='8'>
-                    <p>3:00 p.m</p>
-                </button>
-                <button id='9'>
-                    <p>4:00 p.m</p>
-                </button>
-                <button id='10'>
-                    <p>5:00 p.m</p>
-                </button>
-                <button id='11'>
-                    <p>6:00 p.m</p>
-                </button>
-                <button id='12'>
-                    <p>7:00 p.m</p>
-                </button>
+                {this.renderTimeButtons()}
             </div>
         )
     }
