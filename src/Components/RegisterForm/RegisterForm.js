@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AuthApiService from '../../services/auth-api-service'
+import AuthApiService from '../../Services/auth-api-service'
 
 export default class RegisterForm extends Component {
     static defaultProps = {

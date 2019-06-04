@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import BarberListContext from '../../contexts/BarberListContext'
+import BarberListContext from '../../Contexts/BarberListContext'
 import Barber from '../Barber/Barber'
-import BarberApiService from '../../services/barber-api-service'
+import BarberApiService from '../../Services/barber-api-service'
 
 export default class BarberList extends Component {
     static contextType = BarberListContext

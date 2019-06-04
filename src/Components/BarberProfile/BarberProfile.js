@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BarberApiService from '../../services/barber-api-service'
+import BarberApiService from '../../Services/barber-api-service'
 import { TimeButtons, ServiceButtons } from '../Utilitys/Utils'
 export default class BarberProfile extends Component {
     state = {

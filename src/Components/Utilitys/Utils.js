@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import BarberApiService from '../../services/barber-api-service';
+import BarberApiService from '../../Services/barber-api-service';
 
 export class ServiceButtons extends Component {
     state = {
