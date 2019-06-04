@@ -4,7 +4,7 @@ import BarberApiService from '../../Services/barber-api-service';
 
 export class ServiceButtons extends Component {
     state = {
-        barberServices: []
+        barberServices: [],
     }
     componentDidMount() {
         BarberApiService.getBarberServices()
@@ -13,10 +13,16 @@ export class ServiceButtons extends Component {
 
             })
     }
+    handleSelectServiceType = (e, type) => {
+        // this.props.serviceid(type)
+        e.preventDefault()
+        this.props.serviceId(type.type)
+    }
 
     renderServices() {
         return this.state.barberServices.map(barber => {
-            return <button key={barber.id} >
+            return <button onClick={(e) => this.handleSelectServiceType(e ,barber)}
+                key={barber.id} >
                 <h3>{barber.type}</h3>
                 <p>{barber.cost} 45min</p>
             </button>
