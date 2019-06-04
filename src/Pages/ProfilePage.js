@@ -1,7 +1,19 @@
 import React, { Component } from 'react'
+import AppointmentApiService from '../Services/appointment-api-service'
 import { TimeButtons } from '../Components/Utilitys/Utils'
 
 export default class ProfilePage extends Component {
+    state={
+        appointmentlist: []
+    }
+
+    componentDidMount(){
+        AppointmentApiService.getAllAppointments()
+            .then(appointment => console.log(appointment))
+                // this.setState({
+                //     appointmentlist:appointment
+                // }))
+    }
     render() {
         return (
             <div>
