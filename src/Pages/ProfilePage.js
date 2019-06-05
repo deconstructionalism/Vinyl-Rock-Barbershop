@@ -11,7 +11,6 @@ export default class ProfilePage extends Component {
     }
 
     componentDidMount() {
-        // const { profileId } = this.props.match.params;
         AppointmentApiService.getAllAppointments()
             .then(appointment =>
                 this.setState({
@@ -23,7 +22,7 @@ export default class ProfilePage extends Component {
         const { appointmentList } = this.state
         return appointmentList.map((appointment , key) => {
             const { time, first_name, type } = appointment
-            return <tr key={key} >
+            return <tr key={key}  >
                     <td>{time}</td>
                     <td>{first_name}</td>
                     <td>{type}</td>

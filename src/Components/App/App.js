@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import BarberPage from '../../Pages/BarberPage'
-import BarberProfile from '../../Components/BarberProfile/BarberProfile'
+import BarberProfile from '../BarberProfile/BarberProfile'
 import HomePage from '../../Pages/HomePage'
 import LoginPage from '../../Pages/LoginPage'
 import NavBar from '../NavBar/NavBar'
@@ -32,7 +32,7 @@ export default class App extends Component {
             <Route exact path='/Barbers' component={BarberPage} />
             <Route exact path='/BarbersProfile/:barberid' component={BarberProfile}/>
             <Route exact path='/Login' component={LoginPage} />
-            <Route exact path='/Profile/:profileId' component={ProfilePage}/>
+            <Route exact path='/Profile' component={ProfilePage}/>
             <Route exact path='/Register' component={RegisterPage} />
             <Route exact path='/Service' component={ServiceManuPage} />
           </Switch>

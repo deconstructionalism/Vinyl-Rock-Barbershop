@@ -22,7 +22,7 @@ export default class NavBar extends Component {
                 <Link to="/Barbers">
                   Barbers
                 </Link>
-                <Link to='/Profile/:profileId'>
+                <Link to='/Profile'>
                   Profile
                 </Link>
                 <Link to="/Login">

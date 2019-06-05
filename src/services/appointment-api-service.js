@@ -14,7 +14,7 @@ const AppointmentApiService = {
                     : res.json()
             )
     },
-    getAppointment(AppointmentId) {
+    getAppointmentbyId(AppointmentId) {
         return fetch(`${config.API_ENDPOINT}/appointment/${AppointmentId}`, {
             headers: {
                 'Authorization': `bearer ${TokenService.getAuthToken()}`
@@ -38,7 +38,21 @@ const AppointmentApiService = {
             .then(res =>
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
-                    : res.json()
+                    : res.json({message:'Accpeted'})
+            )
+    },
+    deleteAppointment(appointmentId) {
+        fetch(`${config.API_ENDPOINT}/appointment/${appointmentId}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json({ message: 'Appointment canceled' })
             )
     }
 }

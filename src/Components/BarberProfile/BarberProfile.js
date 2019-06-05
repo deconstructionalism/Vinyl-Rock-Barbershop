@@ -42,14 +42,18 @@ export default class BarberProfile extends Component {
             services_id: serviceSelected,
             barber_id: id
         }
-        console.log(newAppointment)
         AppointmentApiService.postAppointment(newAppointment)
-            .then(res => TokenService.hasAuthToken(res))
-            .then(data => console.log(data))
+        .then(res => {
+            if(res){
+                console.log('accepeted')
+            }
+        
+        })
+            
+        }
+        
 
-
-
-    }
+    
 
 
 
