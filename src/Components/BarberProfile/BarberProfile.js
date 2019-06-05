@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import AppointmentApiService from '../../Services/appointment-api-service'
 import BarberApiService from '../../Services/barber-api-service'
-import TokenService from '../../Services/token-service'
+
 
 import { TimeButtons, ServiceButtons } from '../Utilitys/Utils'
 

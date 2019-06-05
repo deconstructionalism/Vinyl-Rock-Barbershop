@@ -1,0 +1,16 @@
+nav{
+    font-size:2rem;
+    background-color:grey;
+}
+
+nav ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: space-around
+}
+ nav ul li {
+     cursor:pointer;
+     padding: 0.5rem;
+ }
