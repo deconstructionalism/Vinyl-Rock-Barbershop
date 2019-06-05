@@ -14,7 +14,7 @@ export class ServiceButtons extends Component {
     }
     handleSelectServiceType = (e, selected) => {
         e.preventDefault()
-        this.props.serviceId(selected.type)
+        this.props.serviceId(selected.id)
     }
 
     renderServices() {

@@ -5,7 +5,6 @@ import { TimeButtons, ServiceButtons } from '../Utilitys/Utils'
 export default class BarberProfile extends Component {
     state = {
         barberInfo: [],
-        newAppointment: [],
         serviceSelected: '',
         timeSelected: '',
         hasError: false
@@ -15,7 +14,6 @@ export default class BarberProfile extends Component {
     }
     componentDidMount() {
         const { barberid } = this.props.match.params
-        const { newAppointment } = this.state.newAppointment
         BarberApiService.getBarber(barberid)
             .then(data => {
                 return this.setState({ barberInfo: data })
@@ -30,23 +28,28 @@ export default class BarberProfile extends Component {
         return this.setState({ timeSelected: ev })
     }
     
-    handlePostOfSelectedServices = ev => {
+    handleSelectedServices = ev => {
         ev.preventDefault();
-
-         this.setState({
-            newAppointment: [
-                this.state.serviceSelected,
-                this.state.timeSelected]
+    
+        const {timeSelected , serviceSelected } = this.state
+        AppointmentApiService.postAppointment({
+                time:timeSelected,
+                type:serviceSelected,
+                first_name:this.state.barberInfo.first_name,
+            
         })
-        console.log(this.state.newAppointment)
+           
     }
+
+    
+
     render() {
         const { first_name } = this.state.barberInfo
         return (
             <div>
                 <h1>{first_name}</h1>
                 <form className='service-time-list'
-                    onSubmit={this.handlePostOfSelectedServices}
+                    onSubmit={this.handleSelectedServices}
                 ><div className='service-list'>
                         <h3>Choose your Service</h3>
                         <ServiceButtons serviceId={this.handleServiceType} />
