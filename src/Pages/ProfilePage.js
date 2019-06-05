@@ -21,14 +21,14 @@ export default class ProfilePage extends Component {
 
     renderProfile() {
         const { appointmentList } = this.state
-        return appointmentList.map( appointment => {
+        return appointmentList.map((appointment , key) => {
             const { time, first_name, type } = appointment
-            return <tr>
-                <td>{time}</td>
-                <td>{first_name}</td>
-                <td>{type}</td>
-                <td><button>Cancel</button></td>
-            </tr>
+            return <tr key={key} >
+                    <td>{time}</td>
+                    <td>{first_name}</td>
+                    <td>{type}</td>
+                    <td><button>Cancel</button></td>
+                </tr>
         })
 
     }
@@ -39,12 +39,14 @@ export default class ProfilePage extends Component {
                 <h1>My Profile</h1>
                 <h3>appointments</h3>
                 <table>
+                    <tbody>
                     <tr>
                         <th>Time</th>
                         <th>Barber</th>
                         <th>Service</th>
                     </tr>
-                   {this.renderProfile()}
+                    {this.renderProfile()}
+                    </tbody>
                 </table>
             </div>
         )

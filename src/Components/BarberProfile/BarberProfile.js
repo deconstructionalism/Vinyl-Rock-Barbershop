@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import BarberApiService from '../../Services/barber-api-service'
+
 import AppointmentApiService from '../../Services/appointment-api-service'
+import BarberApiService from '../../Services/barber-api-service'
 import TokenService from '../../Services/token-service'
+
 import { TimeButtons, ServiceButtons } from '../Utilitys/Utils'
+
 export default class BarberProfile extends Component {
     state = {
         barberInfo: [],
@@ -21,7 +24,6 @@ export default class BarberProfile extends Component {
             })
     }
 
-
     handleServiceType = ev => {
         return this.setState({ serviceSelected: ev })
     }
@@ -33,17 +35,19 @@ export default class BarberProfile extends Component {
         ev.preventDefault();
 
         const { timeSelected, serviceSelected } = this.state
-        const { barberId } = this.state.barberInfo
+        const { id } = this.state.barberInfo
+        
         const newAppointment = {
             time: timeSelected,
             services_id: serviceSelected,
-            barber_id: barberId
-
+            barber_id: id
         }
+        console.log(newAppointment)
         AppointmentApiService.postAppointment(newAppointment)
             .then(res => TokenService.hasAuthToken(res))
-        
-           
+            .then(data => console.log(data))
+
+
 
     }
 
@@ -62,7 +66,7 @@ export default class BarberProfile extends Component {
                     </div>
                     <div className='time-list'>
                         <h3>Pick Time</h3>
-                        <TimeButtons name='time'timeId={this.handleSelectTime} />
+                        <TimeButtons name='time' timeId={this.handleSelectTime} />
                     </div>
                     <button type='submit'>Review/Book</button>
                 </form>

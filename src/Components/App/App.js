@@ -32,7 +32,7 @@ export default class App extends Component {
             <Route exact path='/Barbers' component={BarberPage} />
             <Route exact path='/BarbersProfile/:barberid' component={BarberProfile}/>
             <Route exact path='/Login' component={LoginPage} />
-            <Route exact path='/Profile' component={ProfilePage}/>
+            <Route exact path='/Profile/:profileId' component={ProfilePage}/>
             <Route exact path='/Register' component={RegisterPage} />
             <Route exact path='/Service' component={ServiceManuPage} />
           </Switch>

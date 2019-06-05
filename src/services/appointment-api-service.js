@@ -5,6 +5,7 @@ const AppointmentApiService = {
     getAllAppointments() {
         return fetch(`${config.API_ENDPOINT}/appointment`, {
             headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
             },
         })
             .then(res =>
@@ -27,7 +28,9 @@ const AppointmentApiService = {
     },
      postAppointment(appointment) {
         return fetch(`${config.API_ENDPOINT}/appointment`, {
+            method:'POST',
             headers: {
+                'content-type': 'application/json',
                 'Authorization': `bearer ${TokenService.getAuthToken()}`
             },
             body: JSON.stringify(appointment)
