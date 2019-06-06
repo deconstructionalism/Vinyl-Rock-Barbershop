@@ -26,7 +26,7 @@ export class ServiceButtons extends Component {
                 onClick={(e) => this.handleSelectServiceType(e, barber)}
                 key={barber.id} >
                 <h3>{barber.type}</h3>
-                <p>{barber.cost} 45min</p>
+                <p>{barber.price} 45min</p>
             </button>
         })
     }
@@ -150,3 +150,36 @@ export class backdrop extends Component {
     }
 }
 
+
+
+export class ServiceList extends Component {
+    state = {
+        barberServices: [],
+    }
+    componentDidMount() {
+        BarberApiService.getBarberServices()
+            .then(services => {
+                return this.setState({ barberServices: services })
+
+            })
+    }
+    renderServices() {
+        return this.state.barberServices.map(barber => {
+            return <ul>
+                <li  key={barber.id} >
+                    <p>
+                      {barber.type}........{barber.price}
+                   </p>
+                </li>
+            </ul>
+        
+        })
+    }
+    render() {
+        return (
+            <div>
+                {this.renderServices()}
+            </div>
+        )
+    }
+}
