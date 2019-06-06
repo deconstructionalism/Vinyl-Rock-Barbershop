@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+
 import BarberApiService from '../../Services/barber-api-service';
+import { Link } from 'react-router-dom'
 import './Utils.css'
+
 export class ServiceButtons extends Component {
     state = {
         barberServices: [],
@@ -94,12 +97,10 @@ export class SideNavToggleButton extends Component {
     }
 }
 
-
-
-export default class SideNavDrawer extends Component {
+export  class SideNavDrawer extends Component {
     render() {
         return (
-            <nav>
+            <nav className='side-drawer'>
                 <ul>
                     <li>
                         <Link to="/">
@@ -135,6 +136,6 @@ export default class SideNavDrawer extends Component {
                     </li>
                 </ul>
             </nav>
-                )
-            }
-        }
+        )
+    }
+}

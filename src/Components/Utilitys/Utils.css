@@ -20,4 +20,6 @@
     height: 2px;
     background: white
 }
-
+.toggle-button:checked {
+    transform: rotate(135deg);
+}

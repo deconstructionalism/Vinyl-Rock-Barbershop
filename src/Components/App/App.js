@@ -9,6 +9,7 @@ import NavBar from '../NavBar/NavBar'
 import ProfilePage from '../../Pages/ProfilePage';
 import RegisterPage from '../../Pages/RegisterPage'
 import ServiceManuPage from '../../Pages/ServiceManuPage'
+import { SideNavDrawer } from '../Utilitys/Utils'
 import './App.css';
 
 export default class App extends Component {
@@ -21,18 +22,19 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{height:'100%'}}>
         <header className='Nav-header'>
           <NavBar />
+          <SideNavDrawer />
         </header>
-        <main role='main' className='vinyl-main'>
+        <main role='main' className='vinyl-main' style={{marginTop:'64px'}}>
           {this.state.hasError && <p className='red'>There was an error!</p>}
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/Barbers' component={BarberPage} />
-            <Route exact path='/BarbersProfile/:barberid' component={BarberProfile}/>
+            <Route exact path='/BarbersProfile/:barberid' component={BarberProfile} />
             <Route exact path='/Login' component={LoginPage} />
-            <Route exact path='/Profile' component={ProfilePage}/>
+            <Route exact path='/Profile' component={ProfilePage} />
             <Route exact path='/Register' component={RegisterPage} />
             <Route exact path='/Service' component={ServiceManuPage} />
           </Switch>
