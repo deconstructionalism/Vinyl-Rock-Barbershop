@@ -22,7 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <header>
+        <header className='Nav-header'>
           <NavBar />
         </header>
         <main role='main' className='vinyl-main'>

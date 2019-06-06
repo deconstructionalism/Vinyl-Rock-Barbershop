@@ -1,16 +1,40 @@
-nav{
-    font-size:2rem;
-    background-color:grey;
-}
 
-nav ul {
-    list-style-type: none;
+.Nav-header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    background:grey;
+    height: 56px;
+}
+.NavBar {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding:0 1rem;
+}
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size:1.5rem;
+
+}
+.right-nav ul {
+    list-style: none;
     margin:0;
     padding:0;
-    display: flex;
-    justify-content: space-around
+    display:flex;
 }
- nav ul li {
-     cursor:pointer;
-     padding: 0.5rem;
- }
+
+.right-nav li {
+    padding:0 0.5rem;
+}
+.right-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-nav a:hover,
+.right-nav a:active{
+    color: rgb(189, 95, 12)
+}

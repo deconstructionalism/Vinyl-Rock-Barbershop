@@ -10,11 +10,12 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className='NavBar'>
-        <ul>
-          <div className='left-nav'>
-            <li><Link to="/">Vinyl Rock</Link></li>
-          </div>
-          <div className='right-nav'>
+        <div className='logo'>
+          <Link to="/">Vinyl Rock</Link>
+        </div>
+        <div className='spacer'/>
+        <div className='right-nav'>
+          <ul>
             <li><Link to="/">
               Home
                 </Link></li>
@@ -35,8 +36,8 @@ export default class NavBar extends Component {
               to="/">
               Logout
                 </Link></li>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </nav>
     )
   }
