@@ -9,18 +9,23 @@
     justify-content: center;
 }
 section {
-    color:white;
+    color: white;
     justify-content: center;
     position: absolute;
     display:flex;
     height: 100%;
+    line-height: 1.5;
     flex-direction: column;
     align-content:center;
     text-align: left;
 }
+h1{
+    font-size:32px;
+}
 
 p {
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 22px;
 }
 button{
     background:rgba(0, 0, 0, 0.0);
