@@ -82,14 +82,59 @@ export class TimeButtons extends Component {
 
 
 
-export class SideNavButton extends Component {
+export class SideNavToggleButton extends Component {
     render() {
         return (
             <button className='toggle-button'>
                 <span className='toggle-button-line' />
                 <span className='toggle-button-line' />
-                <span className='toggle-button-line'/>
+                <span className='toggle-button-line' />
             </button >
         )
     }
 }
+
+
+
+export default class SideNavDrawer extends Component {
+    render() {
+        return (
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/Service">
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/Barbers">
+                            Barbers
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to='/Profile'>
+                            Profile
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/Login">
+                            Login
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            onClick={this.handleLogout}
+                            to="/">
+                            Logout
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+                )
+            }
+        }

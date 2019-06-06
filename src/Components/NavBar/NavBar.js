@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import { SideNavButton } from '../Utilitys/Utils'
+import { SideNavToggleButton } from '../Utilitys/Utils'
 import TokenService from '../../Services/token-service'
 import './NavBar.css'
 
@@ -12,8 +12,8 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className='NavBar'>
-        <div> 
-          <SideNavButton/>
+        <div>
+          <SideNavToggleButton />
         </div>
         <div className='logo'>
           <Link to="/">Vinyl Rock</Link>
@@ -21,26 +21,38 @@ export default class NavBar extends Component {
         <div className='spacer' />
         <div className='right-nav'>
           <ul>
-            <li><Link to="/">
-              Home
-                </Link></li>
-            <li><Link to="/Service">
-              Services
-                </Link></li>
-            <li><Link to="/Barbers">
-              Barbers
-                </Link></li>
-            <li><Link to='/Profile'>
-              Profile
-                </Link></li>
-            <li><Link to="/Login">
-              Login
-                </Link></li>
-            <li><Link
-              onClick={this.handleLogout}
-              to="/">
-              Logout
-                </Link></li>
+            <li>
+              <Link to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/Service">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link to="/Barbers">
+                Barbers
+              </Link>
+            </li>
+            <li>
+              <Link to='/Profile'>
+                Profile
+              </Link>
+            </li>
+            <li>
+              <Link to="/Login">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={this.handleLogout}
+                to="/">
+                Logout
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
