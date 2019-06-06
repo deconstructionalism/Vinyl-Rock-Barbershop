@@ -29,7 +29,7 @@ export class BarberListProvider extends Component {
         const { barberList,
                 error,
                } = this.state
-        
+
         const value = {
             barberList,
             error,

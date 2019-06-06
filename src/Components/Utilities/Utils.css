@@ -1,0 +1,35 @@
+.toggle-button {
+    cursor: pointer;
+    outline: none;
+    position: fixed;
+    top: 15px;
+    right: 12px;
+    transition: opacity 0.2s linear;
+}
+
+.toggle-button:hover {
+    opacity: 0.8;
+}
+
+
+.toggle-button-line {
+    width: 25px;
+    height: 4px;
+    background: white;
+    margin-bottom: 5px;
+    border-radius: 1.5px;
+}
+
+.backdrop {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+@media only screen and (min-width: 570px) {
+    .toggle-button {
+        display: none;
+    }
+  }

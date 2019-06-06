@@ -88,11 +88,14 @@ export class TimeButtons extends Component {
 export class SideNavToggleButton extends Component {
     render() {
         return (
-            <button className='toggle-button'>
-                <span className='toggle-button-line' />
-                <span className='toggle-button-line' />
-                <span className='toggle-button-line' />
-            </button >
+            <div className='toggle-button'>
+                {/* <p>what the fuck</p>
+                <p>what the fuck</p>
+                <p>what the fuck</p> */}
+                <div className='toggle-button-line' />
+                <div className='toggle-button-line' />
+                <div className='toggle-button-line' />
+            </div >
         )
     }
 }
@@ -172,7 +175,7 @@ export class ServiceList extends Component {
                    </p>
                 </li>
             </ul>
-        
+
         })
     }
     render() {

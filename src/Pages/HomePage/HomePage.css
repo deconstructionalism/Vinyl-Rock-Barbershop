@@ -24,15 +24,15 @@ h1{
     font-size:32px;
 }
 
-p {
+/* p {
     font-weight: 700;
     font-size: 22px;
-}
+} */
 button{
     background:rgba(0, 0, 0, 0.0);
     border:none;
     margin-bottom: 15px;
-   
+
 }
 button a {
     user-select: none;

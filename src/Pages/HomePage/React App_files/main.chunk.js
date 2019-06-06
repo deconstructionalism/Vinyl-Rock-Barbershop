@@ -45,9 +45,9 @@ exports.push([module.i, "\n.Nav-header{\n    position: fixed;\n    top:0;\n    l
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilitys/Utils.css":
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilities/Utils.css":
 /*!**********************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/Components/Utilitys/Utils.css ***!
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/Components/Utilities/Utils.css ***!
   \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -464,7 +464,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Services_appointment_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Services/appointment-api-service */ "./src/Services/appointment-api-service.js");
 /* harmony import */ var _Services_barber_api_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Services/barber-api-service */ "./src/Services/barber-api-service.js");
-/* harmony import */ var _Utilitys_Utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Utilitys/Utils */ "./src/Components/Utilitys/Utils.js");
+/* harmony import */ var _Utilities_Utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Utilities/Utils */ "./src/Components/Utilities/Utils.js");
 var _jsxFileName = "/Users/codygillette/Desktop/Thinkful/vinyl-rock-barbershop/src/Components/BarberProfile/BarberProfile.js";
 
 
@@ -555,7 +555,7 @@ class BarberProfile extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 68
       },
       __self: this
-    }, "Choose your Service"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilitys_Utils__WEBPACK_IMPORTED_MODULE_3__["ServiceButtons"], {
+    }, "Choose your Service"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utils__WEBPACK_IMPORTED_MODULE_3__["ServiceButtons"], {
       name: "services",
       serviceId: this.handleServiceType,
       __source: {
@@ -576,7 +576,7 @@ class BarberProfile extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 72
       },
       __self: this
-    }, "Pick Time"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilitys_Utils__WEBPACK_IMPORTED_MODULE_3__["TimeButtons"], {
+    }, "Pick Time"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utils__WEBPACK_IMPORTED_MODULE_3__["TimeButtons"], {
       name: "time",
       timeId: this.handleSelectTime,
       __source: {
@@ -934,7 +934,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Utilitys_Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utilitys/Utils */ "./src/Components/Utilitys/Utils.js");
+/* harmony import */ var _Utilities_Utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Utilities/Utils */ "./src/Components/Utilities/Utils.js");
 /* harmony import */ var _Services_token_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Services/token-service */ "./src/Services/token-service.js");
 /* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./NavBar.css */ "./src/Components/NavBar/NavBar.css");
 /* harmony import */ var _NavBar_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_NavBar_css__WEBPACK_IMPORTED_MODULE_4__);
@@ -1081,7 +1081,7 @@ class NavBar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 55
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilitys_Utils__WEBPACK_IMPORTED_MODULE_2__["SideNavToggleButton"], {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Utilities_Utils__WEBPACK_IMPORTED_MODULE_2__["SideNavToggleButton"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 56
@@ -1307,15 +1307,15 @@ RegisterForm.defaultProps = {
 
 /***/ }),
 
-/***/ "./src/Components/Utilitys/Utils.css":
+/***/ "./src/Components/Utilities/Utils.css":
 /*!*******************************************!*\
-  !*** ./src/Components/Utilitys/Utils.css ***!
+  !*** ./src/Components/Utilities/Utils.css ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Utils.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilitys/Utils.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Utils.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilities/Utils.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1334,8 +1334,8 @@ var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addS
 if(content.locals) module.exports = content.locals;
 
 if(true) {
-	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Utils.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilitys/Utils.css", function() {
-		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Utils.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilitys/Utils.css");
+	module.hot.accept(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Utils.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilities/Utils.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./Utils.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/Components/Utilities/Utils.css");
 
 		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 
@@ -1362,9 +1362,9 @@ if(true) {
 
 /***/ }),
 
-/***/ "./src/Components/Utilitys/Utils.js":
+/***/ "./src/Components/Utilities/Utils.js":
 /*!******************************************!*\
-  !*** ./src/Components/Utilitys/Utils.js ***!
+  !*** ./src/Components/Utilities/Utils.js ***!
   \******************************************/
 /*! exports provided: ServiceButtons, TimeButtons, SideNavToggleButton, SideNavDrawer, backdrop */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1380,9 +1380,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Services_barber_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Services/barber-api-service */ "./src/Services/barber-api-service.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "../../../node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Utils_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Utils.css */ "./src/Components/Utilitys/Utils.css");
+/* harmony import */ var _Utils_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Utils.css */ "./src/Components/Utilities/Utils.css");
 /* harmony import */ var _Utils_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Utils_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/codygillette/Desktop/Thinkful/vinyl-rock-barbershop/src/Components/Utilitys/Utils.js";
+var _jsxFileName = "/Users/codygillette/Desktop/Thinkful/vinyl-rock-barbershop/src/Components/Utilities/Utils.js";
 
 
 

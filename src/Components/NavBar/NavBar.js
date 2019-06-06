@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import { SideNavToggleButton } from '../Utilitys/Utils'
+import { SideNavToggleButton } from '../Utilities/Utils'
 import TokenService from '../../Services/token-service'
 import './NavBar.css'
 

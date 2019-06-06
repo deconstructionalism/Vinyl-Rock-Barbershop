@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import AppointmentApiService from '../../Services/appointment-api-service'
 import BarberApiService from '../../Services/barber-api-service'
 
-
-import { TimeButtons, ServiceButtons } from '../Utilitys/Utils'
+import { TimeButtons, ServiceButtons } from '../Utilities/Utils'
 
 export default class BarberProfile extends Component {
     state = {
@@ -36,7 +35,7 @@ export default class BarberProfile extends Component {
 
         const { timeSelected, serviceSelected } = this.state
         const { id } = this.state.barberInfo
-        
+
         const newAppointment = {
             time: timeSelected,
             services_id: serviceSelected,
@@ -47,13 +46,13 @@ export default class BarberProfile extends Component {
             if(res){
                 console.log('accepeted')
             }
-        
-        })
-            
-        }
-        
 
-    
+        })
+
+        }
+
+
+
 
 
 
