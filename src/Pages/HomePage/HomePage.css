@@ -9,7 +9,7 @@
     justify-content: center;
 }
 section {
-    color:rgba(170, 167, 167, 0.947);
+    color:white;
     justify-content: center;
     position: absolute;
     display:flex;
@@ -19,7 +19,21 @@ section {
     text-align: left;
 }
 
-p{
+p {
     font-size: 18px;
 }
+button{
+    background:rgba(0, 0, 0, 0.0);
+    border:none;
+    margin-bottom: 15px;
+   
+}
+button a {
+    text-decoration: underline;
+    font-size:1.5rem;
+    color:white;
+}
 
+button a:hover{
+      color: rgba(255, 0, 0, 0.502);
+}
