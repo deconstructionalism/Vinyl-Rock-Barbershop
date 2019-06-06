@@ -10,9 +10,9 @@ export default class Homepage extends Component {
                     <h1>Vinly Rock</h1>
                     <h2>Barbershop</h2>
                     <p>
-                        Welcome to Vinyl Rock Barbershop <br/> 
-                        Where hair cuting comes easy!<br/> 
-                        Just log in, pick your pro , and your good to go!
+                        Welcome to Vinyl Rock Barbershop.<br/>
+                        Where hair cuting comes easy.<br/>
+                        Just log in, Pick your barber , and we'll see you soon!
                     </p>
                     <button>
                         <Link to="/Login">

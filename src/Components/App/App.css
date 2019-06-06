@@ -1,15 +1,18 @@
 #root{
   display: flex;
-  flex:1
+  flex:1;
 }
 .main-container{
+  height: 100%;
   display: flex;
   flex:1
 
 }
 main{
+  height: 100%;
   display: flex;
   flex: 1px;
   justify-content: center;
+
 }
 

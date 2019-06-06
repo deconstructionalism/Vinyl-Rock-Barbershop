@@ -36,7 +36,6 @@ export default class App extends Component {
             <Route exact path='/Register' component={RegisterPage} />
             <Route exact path='/Service' component={ServiceManuPage} />
           </Switch>
-
         </main>
 
       </div>
