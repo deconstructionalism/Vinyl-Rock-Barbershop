@@ -35,6 +35,7 @@ button{
    
 }
 button a {
+    user-select: none;
     text-decoration: underline;
     font-size:1.5rem;
     color:white;
