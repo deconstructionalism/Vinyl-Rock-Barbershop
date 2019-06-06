@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import BarberPage from '../../Pages/BarberPage/BarberPage'
 import BarberProfile from '../BarberProfile/BarberProfile'
+import Footer from '../../Components/Footer/Footer'
 import HomePage from '../../Pages/HomePage/HomePage'
 import LoginPage from '../../Pages/LoginPage/LoginPage'
 import NavBar from '../NavBar/NavBar'
@@ -37,7 +38,9 @@ export default class App extends Component {
             <Route exact path='/Service' component={ServiceManuPage} />
           </Switch>
         </main>
-
+          <footer >
+            <Footer />
+          </footer>
       </div>
     )
   }
