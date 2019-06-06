@@ -9,7 +9,7 @@
     justify-content: center;
 }
 section {
-    color:white;
+    color:rgba(170, 167, 167, 0.947);
     justify-content: center;
     position: absolute;
     display:flex;
@@ -19,5 +19,7 @@ section {
     text-align: left;
 }
 
-
+p{
+    font-size: 18px;
+}
 

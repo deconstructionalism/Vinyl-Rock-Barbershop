@@ -4,7 +4,7 @@
     top:0;
     left: 0;
     width:100%;
-    background:grey;
+    background:rgba(170, 167, 167, 0.5);
     height: 56px;
 }
 .NavBar {
