@@ -1,5 +1,5 @@
 .toggle-button {
-    display: flex;
+    display: hidden;
     flex-direction: column;
     justify-content: space-around;
     height:24px;
@@ -18,8 +18,14 @@
 .toggle-button-line {
     width: 25px;
     height: 2px;
-    background: white
+    background: white;
 }
-.toggle-button:checked {
-    transform: rotate(135deg);
+
+.backdrop {
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+
 }

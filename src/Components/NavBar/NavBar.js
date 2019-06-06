@@ -12,9 +12,6 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className='NavBar'>
-        <div>
-          <SideNavToggleButton />
-        </div>
         <div className='logo'>
           <Link to="/">Vinyl Rock</Link>
         </div>
@@ -55,6 +52,9 @@ export default class NavBar extends Component {
             </li>
           </ul>
         </div>
+          <div className='side-button'>
+            <SideNavToggleButton />
+          </div>
       </nav>
     )
   }

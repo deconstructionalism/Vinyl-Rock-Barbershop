@@ -42,5 +42,9 @@
 
 .right-nav a:hover,
 .right-nav a:active{
-    color: rgb(189, 95, 12)
+    color: rgba(255, 0, 0, 0.502)
+}
+
+.side-button{
+    display: hidden;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import RegisterForm from '../Components/RegisterForm/RegisterForm'
+import RegisterForm from '../../Components/RegisterForm/RegisterForm'
 
 export default class Register extends Component {
     static defaultProps = {

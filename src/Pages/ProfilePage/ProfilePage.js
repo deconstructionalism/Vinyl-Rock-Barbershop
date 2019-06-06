@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AppointmentApiService from '../Services/appointment-api-service'
+import AppointmentApiService from '../../Services/appointment-api-service'
 
 
 export default class ProfilePage extends Component {
