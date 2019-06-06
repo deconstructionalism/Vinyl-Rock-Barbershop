@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import BarberApiService from '../../Services/barber-api-service';
-
+import './Utils.css'
 export class ServiceButtons extends Component {
     state = {
         barberServices: [],
@@ -76,6 +76,20 @@ export class TimeButtons extends Component {
             <div>
                 {this.renderTimeButtons()}
             </div>
+        )
+    }
+}
+
+
+
+export class SideNavButton extends Component {
+    render() {
+        return (
+            <button className='toggle-button'>
+                <span className='toggle-button-line' />
+                <span className='toggle-button-line' />
+                <span className='toggle-button-line'/>
+            </button >
         )
     }
 }

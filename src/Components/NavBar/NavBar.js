@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import { SideNavButton } from '../Utilitys/Utils'
 import TokenService from '../../Services/token-service'
 import './NavBar.css'
+
 export default class NavBar extends Component {
   handleLogout = () => {
     TokenService.clearAuthToken();
@@ -10,10 +12,13 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className='NavBar'>
+        <div> 
+          <SideNavButton/>
+        </div>
         <div className='logo'>
           <Link to="/">Vinyl Rock</Link>
         </div>
-        <div className='spacer'/>
+        <div className='spacer' />
         <div className='right-nav'>
           <ul>
             <li><Link to="/">
